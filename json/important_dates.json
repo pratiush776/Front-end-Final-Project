@@ -1,0 +1,7 @@
+{
+    "Garbage Collection" : {
+        "Monday":"Regular",
+        "Wednesday":"Regular",
+        "Thursday":"Recycle"
+    }
+}

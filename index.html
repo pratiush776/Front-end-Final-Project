@@ -21,63 +21,30 @@
         <h1 id="page_title">Room Mates</h1>
     </div>
     <div class="main">
+        <!-- ---------------------------------first-row------------------------- -->
         <div class="row">
-            <div class="today section">
-                <h1 class="title">Today</h1>
-                <div class="turns">
-                    <span>
-                        <h2 class="task">Cook </h2>
-                        <h2 class="person"></h2>
-                    </span>
-                    <span>
-                        <h2 class="task">Wash </h2>
-                        <h2 class="person"></h2>
-                    </span>
-                    <span>
-                        <h2 class="task">Clean </h2>
-                        <h2 class="person"></h2>
-                    </span>
-                </div>
-            </div>
-
-            <div class="schedule section">
-                <h1>Schedule</h1>
-                <table>
-                    <tr>
-                        <td>Day</td>
-                        <td>Cook</td>
-                        <td>Clean</td>
-                        <td>Wash</td>
-                    </tr>
-                    <tr>
-                        <td>Sun</td>
-                    </tr>
-                    <tr>
-                        <td>Mon</td>
-                    </tr>
-                    <tr>
-                        <td>Tue</td>
-                    </tr>
-                    <tr>
-                        <td>Thurs</td>
-                    </tr>
-                    <tr>
-                        <td>Fri</td>
-                    </tr>
-                    <tr>
-                        <td>Sat</td>
-                    </tr>
-                </table>
-            </div>
-        </div>
-
-        <div class="important_dates section">
-            <h1>Important Dates</h1>
-            <div class="garbage_collection">
+            <!-- ----------------------------------Today----------------------------- -->
+            <div id="dailyTasks" class="today section">
+                <h1 id="today" class="title">Today</h1>
                 
             </div>
+            <!-- ----------------------------------Schedule----------------------------- -->
+            <div id="schedule" class="schedule section">
+                <h1>Schedule</h1>
+            </div>
         </div>
+        <!-- ----------------------------------Second-row----------------------------- -->
+        <div class="row">
+            <div id="important_dates" class="important_dates section">
+                <h1>Important Dates</h1>
+                <!-- <div class="garbage_collection">
+                    <h3>Garbage Collection :</h3>
+                </div> -->
+            </div>
+         </div>
     </div>
 </body>
 <script src="js/script.js"></script>
+<script src="js/schedule.js"></script>
+<script src="js/important_dates.js"></script>
 </html>
