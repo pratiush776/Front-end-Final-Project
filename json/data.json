@@ -1,0 +1,37 @@
+{
+    "Sunday": {
+        "Cook": "Suman",
+        "Clean": "shlok",
+        "Dishes": "Udit"
+    },
+    "Monday": {
+        "Cook": "Shlok",
+        "Clean": "Suman",
+        "Dishes": "Udit"
+    },
+    "Tuesday": {
+        "Cook": "shlok",
+        "Clean": "shlok",
+        "Dishes": "shlok"
+    },
+    "Wednesday": {
+        "Cook": "Suman",
+        "Clean": "shlok",
+        "Dishes": "udit"
+    },
+    "Thursday": {
+        "Cook": "Suman",
+        "Clean": "shlok",
+        "Dishes": "udit"
+    },
+    "Friday":  {
+        "Cook": "Pratiush",
+        "Clean": "shlok",
+        "Dishes": "shlok"
+    },
+    "Saturday": {
+        "Cook": "Pratiush",
+        "Clean": "shlok",
+        "Dishes": "shlok"
+    }
+}
