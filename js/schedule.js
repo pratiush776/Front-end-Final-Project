@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Load JSON data
-    fetch('/json/data.json') // Replace 'your_data_file.json' with the actual path to your JSON file
+    fetch('/json/data.json') 
         .then(response => response.json())
         .then(data => {
             // Get today's day
@@ -38,14 +38,18 @@ document.addEventListener("DOMContentLoaded", function () {
             let header=document.createElement('tr')
             let first_cell=document.createElement('th')
             first_cell.textContent=""
+            first_cell.style.border="None"
             schedule.appendChild(table)
             table.appendChild(header)
             header.appendChild(first_cell)
+            // ---------------------------heading------------------------------------------------------
             for (tasks in data[today]){
                 let heading=document.createElement('th')
                 heading.innerHTML=tasks
                 header.appendChild(heading)
+                // heading.style.borderBottom="1px solid white"
             }
+            // ---------------------------table-data------------------------------------------------------
             for (let day in data){
                 let row=document.createElement('tr')
                 table.appendChild(row)
@@ -56,9 +60,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     let row_data=document.createElement('td')
                     row_data.textContent=data[day][task]
                     row.appendChild(row_data)
-                    if (data[day][task]== 'Pratiush'){
-                        row_data.classList.add('me')
-                    }
                   }
             }
             

@@ -6,10 +6,7 @@
     color: white;
 }
 
-/* .body{
-    display: flex;
-    flex-direction: row;
-} */
+/* ------------------------------------page title-------------------------- */
 .header{
     height: 10vh;
     width: 100vw;
@@ -23,17 +20,18 @@
     font-size: 2rem;
     color: black;
 }
-
+/* ------------------------------------notepad-------------------------- */
 .notes_btn_icon{
     position: fixed;
     display: flex;
-    height: 4em;
-    width: 4em;
+    height: 7vh;
+    width: 7vh;
     background-color: rgb(110, 165, 212);
     border-radius: 50%;
     bottom: 5vw;
     left: 5vw;
     z-index: 2;
+    cursor: pointer;
 }
 
 .notes_btn_icon img{
@@ -41,30 +39,37 @@
 }
 .notes_invisible{
     display: none;
+    
 }
 
 .notes_visible{
-    display: fixed;
+    display: flex;
+    flex-direction: column;
     position: fixed;
     bottom: 0;
     left: 0;
-    background-image: url(/images/lined_paper_background.png);
+    /* background-image: url(/images/lined_paper_background.png); */
+    background-color: white;
     background-size:cover;
     background-position: center;
-    padding-top: 5em;
+    /* padding-top: 5em; */
     background-repeat: no-repeat;
     background-origin: content-box;
     z-index: 1;
-    -webkit-animation: fadeIn 2s forwards;
-    animation: fadeIn 2s forwards; 
 }
 
+#save,#clear{
+    width: 5rem;
+    height: 2rem;
+    color: black;
+    margin-left: 5vw;
+}
 #notepad .textareas{
     display: flex;
     justify-content: space-evenly;
-    margin-top: -15vh;
     padding: 5vh;
     height: 100vh;
+    
 }
 
 #notepad .textareas textarea{
@@ -73,7 +78,7 @@
     color: black;
     border: none;
     font-size: 1.25em;
-    width: 30vw;
+    width: 80vw;
     height: 100%;
     height: 80%;
     resize: vertical;
@@ -81,87 +86,10 @@
     line-height: 5.75vh;
     
 }
-/* -------------------------------main------------------------------------ */
-.main{
-    display: flex;
-    flex-direction: column;
-    
+#notepad,.textareas,.notes_visible{
+    -webkit-animation: fadeIn 2s forwards;
+    animation: fadeIn 2s forwards; 
 }
-.main .row{
-    display: flex;
-}
-.section {
-    height:45vh;
-    background-color: rgb(161, 103, 214);
-    margin: 1em;
-    padding: 2em;
-    border-radius: 2em;
-    display: flex;
-    flex-direction: column;
-}
-
-.section h1{
-    align-self: center;
-    font-size: 2rem;
-}
-.today{
-    width: 30vw;
-}
-.today .turns{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style: none;
-}
-
-.today .turns .task{
-    font-size: 1.2em;
-}
-.today .current_day{
-    align-self: self-start;
-    font-size: 1em;
-}
-.schedule {
-    width: 100%;
-}
-.schedule h1{
-    padding-bottom: 2vh;
-}
-.schedule table{
-    width: 90%;
-
-}
-.schedule table,th,td{
-    border-radius: 1em;
-}
-
-.schedule table tr td{
-    text-align: center;
-
-}
-.schedule table tr,td{
-    padding:.5vh;
-}
-
-.schedule table tr td:hover{
-    background-color: rgb(228, 228, 228);
-    color: rgb(69, 63, 63);
-    cursor:pointer;
-
-}
-.me{
-    background-color: rgb(198, 95, 95);
-    color: rgb(0, 0, 0);
-}
-.important_dates{
-    height:35vh;
-    width: 100%;
-}
-
-
-/* Add animation (fade in the popup) */
 @-webkit-keyframes fadeIn {
     from {opacity: 0;
         height: 0vh;
@@ -188,3 +116,106 @@
         }
 }
 
+/* -------------------------------main - overall ------------------------------------ */
+.main{
+    display: flex;
+    flex-direction: column;
+    
+}
+.main .row{
+    display: flex;
+}
+.section {
+    height:45vh;
+    background-color: rgb(161, 103, 214);
+    margin: 1em;
+    padding: 2em;
+    border-radius: 2em;
+    display: flex;
+    flex-direction: column;
+}
+
+.section h1{
+    align-self: center;
+    font-size: 2rem;
+}
+
+/* -------------------------------main - today------------------------------------ */
+.today{
+    width: 30vw;
+}
+.today .turns{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+}
+
+.today .turns .task{
+    font-size: 1.2em;
+}
+.today .current_day{
+    align-self: self-start;
+    font-size: 1em;
+}
+
+/* -------------------------------main - schedule ------------------------------------ */
+.schedule {
+    width: 100%;
+}
+.schedule h1{
+    padding-bottom: 2vh;
+}
+.schedule table{
+    width: 90%;
+    height: 100%;
+}
+/* .schedule table,th,td{
+    border-radius: 1em;
+} */
+
+.schedule table tr td{
+    text-align: center;
+}
+
+.schedule table tr,td{
+    padding:.5vh;   
+}
+
+.schedule table tr td:hover{
+    background-color: rgb(228, 228, 228);
+    color: rgb(69, 63, 63);
+    cursor:default;
+}
+
+
+.me{
+    /* hilight my name in the schedule */
+    background-color: rgb(198, 95, 95);
+    color: rgb(0, 0, 0);
+}
+
+/* -------------------------------main - important dates------------------------------------ */
+.important_dates{
+    height:35vh;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1000px),(max-height: 750px) {
+    .main{
+        width: 100vw;
+        justify-content: center;
+    }
+    .section{
+        width: 95%;
+    }
+
+    .schedule{
+        height: min-content;
+    }
+    .main .row{
+        flex-direction: column;
+    }
+  }

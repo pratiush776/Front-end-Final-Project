@@ -4,19 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <title>Room Mates</title>
 </head>
 <body>
     <div id ="nav_btn" class="notes_btn_icon" >
         <img src="images/writing.png">
     </div>
+
+    </div> 
     <div id="notepad" class="notes_invisible">
+
         <div class="textareas">
-            <textarea class="note1 note_field"></textarea>
-            <textarea class="note2 note_field"></textarea>
-            <textarea class="note3 note_field"></textarea>
+            <textarea class="note1 note_field" placeholder="Write Here!!!" id="txt" oninput="save();"></textarea>
         </div>
+
     </div>
+    <!-- ---------------------------------page_title------------------------- -->
     <div class="header">
         <h1 id="page_title">Room Mates</h1>
     </div>
@@ -37,9 +41,7 @@
         <div class="row">
             <div id="important_dates" class="important_dates section">
                 <h1>Important Dates</h1>
-                <!-- <div class="garbage_collection">
-                    <h3>Garbage Collection :</h3>
-                </div> -->
+                
             </div>
          </div>
     </div>
@@ -47,4 +49,5 @@
 <script src="js/script.js"></script>
 <script src="js/schedule.js"></script>
 <script src="js/important_dates.js"></script>
+<script src="js/notes.js"></script>
 </html>
