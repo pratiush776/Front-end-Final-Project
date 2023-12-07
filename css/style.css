@@ -120,6 +120,7 @@
 .main{
     display: flex;
     flex-direction: column;
+    background-color: peachpuff;
     
 }
 .main .row{
@@ -172,9 +173,6 @@
     width: 90%;
     height: 100%;
 }
-/* .schedule table,th,td{
-    border-radius: 1em;
-} */
 
 .schedule table tr td{
     text-align: center;
@@ -205,11 +203,12 @@
 
 @media only screen and (max-width: 1000px),(max-height: 750px) {
     .main{
-        width: 100vw;
-        justify-content: center;
+        display: flex;
+        flex-direction: column;
     }
     .section{
-        width: 95%;
+        width: 100vw;
+        padding: 1em;
     }
 
     .schedule{
