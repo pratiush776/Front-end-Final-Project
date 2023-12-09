@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     // Load JSON data
-    fetch('../json/data.json') 
+    fetch('/json/data.json') 
         .then(response => response.json())
         .then(data => {
             // Get today's day
