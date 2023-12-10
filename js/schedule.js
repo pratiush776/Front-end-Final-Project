@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let rent_section=document.getElementById('rent')
             let rent=document.createElement('h3')
             rent.textContent=`Total Amount : ${total_amount}`
-            rent.style.marginTop="3vw"
+            // rent.style.marginTop="3vw"
             rent_section.appendChild(rent)
                       
         })
