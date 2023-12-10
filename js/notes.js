@@ -1,5 +1,5 @@
 const Default =
-      "";
+      ""
 console.log(localStorage)
 if (
     localStorage.getItem("note") === "" ||

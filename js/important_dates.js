@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    fetch('/json/important_dates.json') // Replace 'your_data_file.json' with the actual path to your JSON file
+    fetch('json/important_dates.json') // Replace 'your_data_file.json' with the actual path to your JSON file
             .then(response => response.json())
             .then(data => {
                 let important_dates=document.getElementById('important_dates')
