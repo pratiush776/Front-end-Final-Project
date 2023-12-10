@@ -51,18 +51,29 @@ document.addEventListener("DOMContentLoaded", function () {
             }
             // ---------------------------table-data------------------------------------------------------
             for (let day in data){
-                let row=document.createElement('tr')
-                table.appendChild(row)
-                let row_day = document.createElement('td')
-                row_day.textContent=day
-                row.appendChild(row_day)
-                for (let task in data[day]) {
-                    let row_data=document.createElement('td')
-                    row_data.textContent=data[day][task]
-                    row.appendChild(row_data)
-                  }
+                if (days.indexOf(day) != -1){
+                    let row=document.createElement('tr')
+                    table.appendChild(row)
+                    let row_day = document.createElement('td')
+                    row_day.textContent=day
+                    row.appendChild(row_day)
+                    
+                    for (let task in data[day]) {
+                        let row_data=document.createElement('td')
+                        row_data.textContent=data[day][task]
+                        row.appendChild(row_data)
+                    }
+                }    
+                    
             }
-            
+            // ---------------------------rent------------------------------------------------------
+            let total_amount=data['Rent']['Total']
+            let rent_section=document.getElementById('rent')
+            let rent=document.createElement('h3')
+            rent.textContent=`Total Amount : ${total_amount}`
+            rent.style.marginTop="3vw"
+            rent_section.appendChild(rent)
+                      
         })
         .catch(error => {
             // Handle any errors here

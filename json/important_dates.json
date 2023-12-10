@@ -3,5 +3,8 @@
         "Monday":"Regular",
         "Wednesday":"Regular",
         "Thursday":"Recycle"
+    },
+    "Whole House Cleaning" : {
+        "Every Month":"15-20th"
     }
 }

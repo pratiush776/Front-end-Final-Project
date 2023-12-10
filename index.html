@@ -8,13 +8,13 @@
     <title>Room Mates</title>
 </head>
 <body>
+    <!-- ---------------------------------nav_bar------------------------- -->
     <div id ="nav_btn" class="notes_btn_icon" >
         <img src="images/writing.png">
     </div>
-
-    </div> 
+    <!-- ---------------------------------notes------------------------- -->
     <div id="notepad" class="notes_invisible">
-
+    
         <div class="textareas">
             <textarea class="note1 note_field" placeholder="Write Here!!!" id="txt" oninput="save();"></textarea>
         </div>
@@ -39,8 +39,15 @@
         </div>
         <!-- ----------------------------------Second-row----------------------------- -->
         <div class="row">
-            <div id="important_dates" class="important_dates section">
+            
+            <div class="important_dates section">
                 <h1>Important Dates</h1>
+                <div id="important_dates"></div>
+                
+            </div>
+
+            <div id="rent" class="rent section">
+                <h1 id="rent_title" class="title">Rent Due </h1>
                 
             </div>
          </div>
