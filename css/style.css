@@ -225,5 +225,23 @@ tr:first-child th{color: rgb(51, 50, 50);}
         left: 50%;
         transform: translate(-50%,-50%);
     }
-    
+    #important_dates{
+        flex-direction: column;
+        align-items: center;
+    }
+    #important_dates div{
+        margin: 2em;
+    }
+    @keyframes fadeIn {
+        from {opacity: 0;
+            height: 0vh;
+            width: 0vw;
+            border-radius: 100%;
+            overflow: hidden;
+            } 
+          to {opacity: 1;
+            border-radius: 1em;
+            overflow: hidden;
+            }
+        }
   }
